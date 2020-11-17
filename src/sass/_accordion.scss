@@ -1,0 +1,57 @@
+.accordion-menu li {
+    position: relative;
+}
+.dropdownlink {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: all 0.4s ease-out;
+}
+
+//список выпадающий
+.submenuItems {
+    position: absolute;
+    z-index: 100;
+    top: 23px;
+    display: none;
+    background: #ffffff;
+    border: 1px solid #b6b6b6;
+    li {
+        transition: 0.3s;
+        &:not(:last-child) {
+            border-bottom: 1px solid #b6b6b6;
+        }
+        &:hover {
+            background-color: lighten(#0072bc, 50%);
+        }
+    }
+}
+
+.dropdownlink {
+    position: relative;
+    padding-right: 20px;
+    border-bottom: 2px dashed #6ba1d1;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 9px;
+        height: 100%;
+        background-image: url("../img/icons/arrow-down.svg#arrow-down");
+        background-size: 100% 100%;
+        transition: 0.5s;
+    }
+}
+
+.accordion-menu li.open .dropdownlink {
+    &::after {
+        transform: rotate(180deg);
+    }
+}
+
+.submenuItems li a {
+    display: block;
+    padding: 10px;
+}

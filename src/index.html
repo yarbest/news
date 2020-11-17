@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <!-- Чёрная планка со временем над шапкой -->
+            <div class="header__tagline header-tagline">
+                <div class="container">
+                    <div class="header-tagline__body">
+                        <p class="header-tagline__text">
+                            Самые
+                            <a href="" class="header-tagline__underline">свежие новости</a>
+                            в реальном времени
+                        </p>
+                        <div class="header-tagline__current-time current-time">
+                            <time datetime="12:30" class="current-time__time">12:30</time>
+                            <!-- /.current-time__time -->
+                            <time datetime="2019-06-19" class="current-time__date">19.06.2019</time>
+                            <!-- /.current-time__date -->
+                            <!-- /.current-time -->
+                        </div>
+                        <!-- /.header-tagline__current-time -->
+                    </div>
+                    <!-- /header-tagline__body -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.header__current-time current-time -->
+            <div class="container">
+                <div class="header__body">
+                    <div class="header__logo logo">
+                        <a href="" class="logo__link">
+                            <svg class="logo__image">
+                                <use xlink:href="img/icons/logo.svg#logo" alt="logo"></use>
+                            </svg>
+                            <p class="logo__text">
+                                Новостное <br />
+                                агентство
+                            </p>
+                        </a>
+                    </div>
+                    <!-- /.header__logo -->
+
+                    <ul class="header__city-select accordion-menu">
+                        <li>
+                            <div class="dropdownlink">Город</div>
+                            <ul class="submenuItems">
+                                <li><a href="#">Москва</a></li>
+                                <li><a href="#">Киев</a></li>
+                                <li><a href="#">Лондон</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="header__city-select ">
+                            <ul class="header__cities-list cities-list content">
+                                <li class="cities-list__item">Москва</li>
+                                <li class="cities-list__item">Киев</li>
+                                <li class="cities-list__item">Лондон</li>
+                            </ul>
+                    </div> -->
+
+                    <!-- /.header__city-select -->
+                    <div class="header__weather weather">
+                        <svg class="weather__icon">
+                            <use xlink:href="img/icons/sun.svg#sun"></use>
+                        </svg>
+                        <p class="weather__temperature">+22 <sup>o</sup>C</p>
+                    </div>
+                    <!-- /.header__weather -->
+                    <form action="" class="header__search-form search-form">
+                        <input
+                            type="text"
+                            class="search-form__input"
+                            placeholder="Поиск по сайту"
+                        />
+                        <button class="search-form__submit">
+                            <svg class="search-form__icon">
+                                <use xlink:href="img/icons/loupe.svg#loupe"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <!-- /.header__search-form -->
+                    <nav class="header__navigation header-navigation">
+                        <ul class="header-navigation__list">
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Главная</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Политика</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Общество</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Экономика</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">В мире</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Проишествия</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Спорт</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Наука</a>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Туризм</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /.header__navigation -->
+                </div>
+                <!-- /.header__body -->
+            </div>
+            <!-- /.container -->
+        </header>
+        <!-- /.header -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
