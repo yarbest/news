@@ -109,13 +109,14 @@
         justify-content: space-between
     &__item
         position: relative
-        &:nth-child(even)
+        &:nth-of-type(odd):not(:first-child)
             opacity: 0.3
             color: #91919f
             font-size: 20px
             pointer-events: none
     &__link
-
+    &__search-form
+        display: none
 
 @media (min-width: 1200px)
     .header-navigation 
@@ -147,9 +148,12 @@
 @media (max-width: 767px)
     .header
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07)
+        position: relative
+        width: 100vw    
         &__body
             position: relative
-            padding: 20px 0 20px 0
+            background-color: #fff
+            padding: 20px 0
         &__logo
             margin-right: auto
         &__city-select
@@ -172,7 +176,7 @@
         width: 100vw
         position: absolute
         top: 90px
-        left: -25px
+        left: -20px
         z-index: 99
         transition: 0.5s ease
         transform: translateX(-120%)
@@ -184,10 +188,14 @@
             padding: 0 20px
             // border: 1px solid #000
         &__item
-            &:not(:last-child)
+            &:not(:last-child):not(:first-child)
                 border-bottom: 1px solid gray
-            &:nth-child(even)
+            &:first-child
+                border-top: none
+            &:nth-of-type(odd)
                 display: none
+            &:first-child
+                display: block
         &__link
             width: 100%
             display: block
@@ -204,10 +212,25 @@
             &:active, &:focus
                 width: 170px
 
-// @media (max-width: 575px)
-
+@media (max-width: 575px)
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        background-color: #fff
+        &__body
+            padding: 10px 0
+    .header-tagline
+        display: none
+    
+    .header-navigation
+        top: 68px
 
 @media (max-width: 480px)
+    .header
+        &__search-form
+            display: none
     .header-tagline
         &__body
             flex-wrap: wrap
@@ -216,8 +239,18 @@
             flex-basis: 50%
 
     .search-form
-        flex-basis: 100%
-        margin-top: 20px
+        
+        &__input
+            width: 100%
+            &:active, &:focus
+                width: 100%
     
     .header-navigation
-        top: 150px
+        top: 60px
+        &__search-form
+            display: block
+            flex-basis: 100%
+            margin-top: 10px
+            position: relative
+            z-index: 101
+        

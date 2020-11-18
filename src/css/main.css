@@ -518,11 +518,15 @@ body {
   position: relative;
 }
 
-.header-navigation__item:nth-child(even) {
+.header-navigation__item:nth-of-type(odd):not(:first-child) {
   opacity: 0.3;
   color: #91919f;
   font-size: 20px;
   pointer-events: none;
+}
+
+.header-navigation__search-form {
+  display: none;
 }
 
 @media (min-width: 1200px) {
@@ -565,10 +569,13 @@ body {
   .header {
     -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    position: relative;
+    width: 100vw;
   }
   .header__body {
     position: relative;
-    padding: 20px 0 20px 0;
+    background-color: #fff;
+    padding: 20px 0;
   }
   .header__logo {
     margin-right: auto;
@@ -592,7 +599,7 @@ body {
     width: 100vw;
     position: absolute;
     top: 90px;
-    left: -25px;
+    left: -20px;
     z-index: 99;
     -webkit-transition: 0.5s ease;
     -o-transition: 0.5s ease;
@@ -614,11 +621,17 @@ body {
             flex-direction: column;
     padding: 0 20px;
   }
-  .header-navigation__item:not(:last-child) {
+  .header-navigation__item:not(:last-child):not(:first-child) {
     border-bottom: 1px solid gray;
   }
-  .header-navigation__item:nth-child(even) {
+  .header-navigation__item:first-child {
+    border-top: none;
+  }
+  .header-navigation__item:nth-of-type(odd) {
     display: none;
+  }
+  .header-navigation__item:first-child {
+    display: block;
   }
   .header-navigation__link {
     width: 100%;
@@ -644,7 +657,29 @@ body {
   }
 }
 
+@media (max-width: 575px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+  }
+  .header__body {
+    padding: 10px 0;
+  }
+  .header-tagline {
+    display: none;
+  }
+  .header-navigation {
+    top: 68px;
+  }
+}
+
 @media (max-width: 480px) {
+  .header__search-form {
+    display: none;
+  }
   .header-tagline__body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -654,13 +689,22 @@ body {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
-  .search-form {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin-top: 20px;
+  .search-form__input {
+    width: 100%;
+  }
+  .search-form__input:active, .search-form__input:focus {
+    width: 100%;
   }
   .header-navigation {
-    top: 150px;
+    top: 60px;
+  }
+  .header-navigation__search-form {
+    display: block;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 10px;
+    position: relative;
+    z-index: 101;
   }
 }
 
