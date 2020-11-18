@@ -622,6 +622,9 @@ body {
             flex-direction: column;
     padding: 0 20px;
   }
+  .header-navigation__item {
+    background-color: #fff;
+  }
   .header-navigation__item:not(:last-child):not(:first-child) {
     border-bottom: 1px solid gray;
   }
