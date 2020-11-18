@@ -597,6 +597,7 @@ body {
   .header-navigation {
     margin-top: 0;
     width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 90px;
     left: -20px;
@@ -696,7 +697,7 @@ body {
     width: 100%;
   }
   .header-navigation {
-    top: 60px;
+    top: 58px;
   }
   .header-navigation__search-form {
     display: block;
