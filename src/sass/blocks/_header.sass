@@ -148,11 +148,15 @@
 @media (max-width: 767px)
     .header
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07)
-        position: relative
-        width: 100vw    
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        background-color: #fff
+        // width: 100vw    
         &__body
-            position: relative
-            background-color: #fff
+            // position: relative
+            
             padding: 20px 0
         &__logo
             margin-right: auto
@@ -169,16 +173,19 @@
     .header-tagline
         &__body
             padding: 10px 0
-            font-size: 14px            
+            font-size: 14px 
+            display: none           
 
     .header-navigation
-        margin-top: 0
-        width: 100vw
-        height: 100vh
         position: absolute
-        top: 90px
-        left: -20px
-        z-index: 99
+        top: 88px
+        bottom: 0
+        left: 0
+        margin-top: 0
+        width: 100%
+        height: 100vh
+
+        // z-index: 99
         transition: 0.5s ease
         transform: translateX(-120%)
         background-color: #fff
@@ -187,19 +194,18 @@
         &__list
             flex-direction: column
             padding: 0 20px
-            // border: 1px solid #000
+            // padding-right: 40px
         &__item
             background-color: #fff
             &:not(:last-child):not(:first-child)
-                border-bottom: 1px solid gray
+                border-bottom: 1px solid lightgray
             &:first-child
-                border-top: none
+                // border-top: none
             &:nth-of-type(odd)
-                display: none
-            &:first-child
-                display: block
+                display: none //скрываем декорные слеши
+
         &__link
-            width: 100%
+            // width: 100%
             display: block
             padding: 20px
             &:active, &:focus
@@ -216,17 +222,17 @@
 
 @media (max-width: 575px)
     .header
-        position: fixed
-        top: 0
-        left: 0
-        right: 0
+        // position: fixed
+        // top: 0
+        // left: 0
+        // right: 0
         background-color: #fff
         &__body
             padding: 10px 0
-    .header-tagline
-        display: none
+
     
     .header-navigation
+        // position: fixed
         top: 68px
 
 @media (max-width: 480px)
@@ -235,20 +241,22 @@
             display: none
     .header-tagline
         &__body
-            flex-wrap: wrap
-            font-size: 12px
+            // flex-wrap: wrap
+            // font-size: 12px
         &__text
-            flex-basis: 50%
+            // flex-basis: 50%
 
-    .search-form
-        
+    .search-form 
         &__input
             width: 100%
             &:active, &:focus
                 width: 100%
     
     .header-navigation
-        top: 58px
+        top: 60px
+        &__item
+            &:first-child   //показываем li, в которой форма
+                display: block
         &__search-form
             display: block
             flex-basis: 100%
