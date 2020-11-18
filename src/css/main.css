@@ -597,9 +597,9 @@ body {
     display: none;
   }
   .header-navigation {
+    overflow-y: scroll;
     position: absolute;
     top: 88px;
-    bottom: 0;
     left: 0;
     margin-top: 0;
     width: 100%;
