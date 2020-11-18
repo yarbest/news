@@ -650,6 +650,10 @@ body {
         flex-wrap: wrap;
     font-size: 12px;
   }
+  .header-tagline__text {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
   .search-form {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
