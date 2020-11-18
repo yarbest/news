@@ -10,8 +10,21 @@
     max-width: 1000px
     margin: 0 auto
 
+.main
+    &__body
+
+
 @media ( max-width: 1199px )
     .container
         width: 100%
         padding: 0 20px
-    
+
+@media ( max-width: 575px )
+    .main
+        &__body
+            margin-top: 70px
+
+@media ( max-width: 480px )
+    .main
+        &__body
+            margin-top: 65px
