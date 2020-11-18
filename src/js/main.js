@@ -1,8 +1,10 @@
 let toggleSidebar = document.querySelector(".header__toggle-sidebar");
 let sidebar = document.querySelector(".header-navigation ");
+let body = document.querySelector("body");
 
 toggleSidebar.addEventListener("click", () => {
     sidebar.classList.toggle("header-navigation_active");
+    body.classList.toggle("lock-scroll");
 });
 
 //аккордеон
