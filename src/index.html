@@ -33,22 +33,29 @@
             <!-- /.header__current-time current-time -->
             <div class="container">
                 <div class="header__body">
+                    <input type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden" />
+                    <label for="checkbox2" class="header__toggle-sidebar">
+                        <div class="hamburger hamburger2">
+                            <span class="bar bar1"></span>
+                            <span class="bar bar2"></span>
+                            <span class="bar bar3"></span>
+                            <span class="bar bar4"></span>
+                        </div>
+                    </label>
+
                     <div class="header__logo logo">
                         <a href="" class="logo__link">
                             <svg class="logo__image">
                                 <use xlink:href="img/icons/logo.svg#logo" alt="logo"></use>
                             </svg>
-                            <p class="logo__text">
-                                Новостное <br />
-                                агентство
-                            </p>
+                            <p class="logo__text">Новостное агентство</p>
                         </a>
                     </div>
                     <!-- /.header__logo -->
 
                     <ul class="header__city-select accordion-menu">
                         <li>
-                            <div class="dropdownlink">Город</div>
+                            <div class="dropdownlink">Ваш город</div>
                             <ul class="submenuItems">
                                 <li><a href="#">Москва</a></li>
                                 <li><a href="#">Киев</a></li>
@@ -56,14 +63,6 @@
                             </ul>
                         </li>
                     </ul>
-
-                    <!-- <div class="header__city-select ">
-                            <ul class="header__cities-list cities-list content">
-                                <li class="cities-list__item">Москва</li>
-                                <li class="cities-list__item">Киев</li>
-                                <li class="cities-list__item">Лондон</li>
-                            </ul>
-                    </div> -->
 
                     <!-- /.header__city-select -->
                     <div class="header__weather weather">
@@ -78,6 +77,7 @@
                             type="text"
                             class="search-form__input"
                             placeholder="Поиск по сайту"
+                            required
                         />
                         <button class="search-form__submit">
                             <svg class="search-form__icon">
@@ -91,27 +91,35 @@
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Главная</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Политика</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Общество</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Экономика</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">В мире</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Проишествия</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Спорт</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Наука</a>
                             </li>
+                            <li class="header-navigation__item">/</li>
                             <li class="header-navigation__item">
                                 <a href="" class="header-navigation__link">Туризм</a>
                             </li>

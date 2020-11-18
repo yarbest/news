@@ -13,17 +13,18 @@
         margin-right: auto
         color: #0072bc
 
-        // background-color: transparent
         
 
     &__cities-list
     &__weather
         margin-right: 5%
     &__search-form
+        flex-basis: 320px
     &__navigation
         margin-top: 35px
         flex-basis: 100%
-
+    &__toggle-sidebar
+        display: none
 .header-tagline
     background-color: #00122f
     &__body
@@ -42,7 +43,8 @@
     &__date
 
 .logo
-    
+    display: flex
+    align-items: center
     &__link
         display: flex
         align-items: center
@@ -54,6 +56,7 @@
         margin-right: 8px
         fill: #0072bc
     &__text
+        max-width: 75px
         font-weight: 700
 
 .cities-list
@@ -73,7 +76,7 @@
     display: flex
     align-items: center
     position: relative
-    flex-basis: 320px
+    
     &__input
         flex-grow: 1
         border-radius: 23px
@@ -100,34 +103,119 @@
         width: 15px
         height: 15px
 
-.header-navigation
-    
+.header-navigation 
     &__list //список категорий в навигации
         display: flex
         justify-content: space-between
     &__item
         position: relative
-        &:not(:last-child)
-            &::after, 
-                content: '/'
-                position: absolute
-                right: -30px
-                pointer-events: none
-                opacity: 0.3
-                color: #91919f
-                font-size: 20px
-        &::before
-            content: ''
-            display: block
-            position: absolute
-            left: 0
-            bottom: -5px
-            width: 100%
-            height: 2px
-            background-color: #0072bc
-            transform: scale(0)
-            transition: 0.3s
-        &:hover
-            &::before
-                transform: scale(1)
+        &:nth-child(even)
+            opacity: 0.3
+            color: #91919f
+            font-size: 20px
+            pointer-events: none
     &__link
+
+
+@media (min-width: 1200px)
+    .header-navigation 
+        &__item
+            &::before //подчеркивание
+                content: ''
+                display: block
+                position: absolute
+                left: 0
+                bottom: -5px
+                width: 100%
+                height: 2px
+                background-color: #0072bc
+                transform: scale(0)
+                transition: 0.3s
+            &:hover
+                &::before
+                    transform: scale(1)
+
+@media (max-width: 991px)
+    .header
+        &__logo
+            margin-right: 3%
+        &__city-select
+            margin-right: 3%
+        &__weather
+            margin-right: 3%
+
+@media (max-width: 767px)
+    .header
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07)
+        &__body
+            position: relative
+            padding: 20px 0 20px 0
+        &__logo
+            margin-right: auto
+        &__city-select
+            margin-right: 3%
+            display: none
+        &__weather
+            margin-right: 3%
+
+        &__toggle-sidebar
+            display: block
+        &__search-form
+    
+    .header-tagline
+        &__body
+            padding: 10px 0
+            font-size: 14px            
+
+    .header-navigation
+        margin-top: 0
+        width: 100vw
+        position: absolute
+        top: 90px
+        left: -25px
+        z-index: 99
+        transition: 0.5s ease
+        transform: translateX(-120%)
+        background-color: #fff
+        &.header-navigation_active
+            transform: translateX(0)
+        &__list
+            flex-direction: column
+            padding: 0 20px
+            // border: 1px solid #000
+        &__item
+            &:not(:last-child)
+                border-bottom: 1px solid gray
+            &:nth-child(even)
+                display: none
+        &__link
+            width: 100%
+            display: block
+            padding: 20px
+            &:active, &:focus
+                color: white
+                background-color: #0072bc
+
+    .search-form
+        flex-basis: auto
+        &__input
+            width: 110px
+            transition: 0.5s ease
+            &:active, &:focus
+                width: 170px
+
+// @media (max-width: 575px)
+
+
+@media (max-width: 480px)
+    .header-tagline
+        &__body
+            flex-wrap: wrap
+            font-size: 12px
+
+    .search-form
+        flex-basis: 100%
+        margin-top: 20px
+    
+    .header-navigation
+        top: 150px

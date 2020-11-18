@@ -1,3 +1,11 @@
+let toggleSidebar = document.querySelector(".header__toggle-sidebar");
+let sidebar = document.querySelector(".header-navigation ");
+
+toggleSidebar.addEventListener("click", () => {
+    sidebar.classList.toggle("header-navigation_active");
+});
+
+//аккордеон
 $(function () {
     var Accordion = function (el, multiple) {
         this.el = el || {};
