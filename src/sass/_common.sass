@@ -1,8 +1,5 @@
 // Variables
-$text-main: #333333
-$decor-main: #ffd200
-$decor-main-darker: #ffc000
-$background-section: #f5f5f5
+$decor-main: #448ccb
 
 //fonts
 @font-face
@@ -37,6 +34,37 @@ body
     font-family: "Arial"
     font-size: 1.6rem
 
+.news-footer
+    display: flex
+    
+    align-items: center
+    
+    font-size: 1.2rem
+
+.news-hashtag
+    font-size: 1.2rem
+    color: #91919fb6
+    // flex-basis: content
+
+.news-time
+    min-width: 45px
+    display: flex
+    align-items: center
+    &-icon
+        margin-right: 5px
+        width: 11px
+        height: 11px
+        fill: $decor-main
+
+.news-comments
+    display: flex
+    align-items: center
+    &-icon
+        margin-right: 5px
+        width: 11px
+        height: 11px
+        fill: $decor-main
+
 // button to top
 .btn-scroll
     display: none
@@ -53,6 +81,17 @@ body
         display: block
         width: 50px
         height: 50px
+
+@media (min-width: 1200px)
+    .daily-item
+        &__title
+            transition: 0.2s ease
+            &:hover
+                color: $decor-main          
+    .news-hashtag
+        transition: 0.2s ease
+        &:hover
+            color: $decor-main
 
 @media (max-width: 991px)
     .btn-scroll

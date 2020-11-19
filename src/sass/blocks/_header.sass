@@ -1,7 +1,8 @@
 
 
 .header
-
+    // border: 1px solid #000
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07)
     &__tagline
     &__body
         display: flex
@@ -13,7 +14,7 @@
         margin-right: 6%
     &__city-select // кнопка выбора городов
         margin-right: auto
-        color: #0072bc
+        color: $decor-main
 
         
 
@@ -57,10 +58,11 @@
         width: 40px
         height: 40px
         margin-right: 8px
-        fill: #0072bc
+        fill: $decor-main
     &__text
         max-width: 75px
         font-weight: 700
+        font-size: 1.4rem
 
 .cities-list
     // display: none
@@ -72,8 +74,9 @@
     &__icon
         width: 30px
         height: 20px
-        fill: #0072bc
+        fill: $decor-main
     &__temperature
+        color: #91919f
 
 .search-form
     display: flex
@@ -86,7 +89,7 @@
         background-color: #ebebeb
         opacity: 0.6
         padding: 15px 45px 15px 20px
-        font-size: 14px
+        font-size: 1.4rem
         border: 1px solid transparent
         &:active, &:focus
             border: 1px solid grey
@@ -115,7 +118,7 @@
         &:nth-of-type(odd):not(:first-child)
             opacity: 0.3
             color: #91919f
-            font-size: 20px
+            font-size: 2rem
             pointer-events: none
     &__link
     &__search-form
@@ -132,7 +135,7 @@
                 bottom: -5px
                 width: 100%
                 height: 2px
-                background-color: #0072bc
+                background-color: $decor-main
                 transform: scale(0)
                 transition: 0.3s
             &:hover
@@ -142,11 +145,11 @@
 @media (max-width: 991px)
     .header
         &__logo
-            margin-right: 3%
+            // margin-right: 3%
         &__city-select
-            margin-right: 3%
+            // margin-right: 3%
         &__weather
-            margin-right: 3%
+            // margin-right: 3%
 
 @media (max-width: 767px)
     body.lock-scroll
@@ -178,11 +181,12 @@
     .header-tagline
         &__body
             padding: 10px 0
-            font-size: 14px 
+            font-size: 1.4rem
             display: none           
 
     .header-navigation
         position: fixed
+        z-index: 1
         top: 88px
         left: 0
         margin-top: 0
@@ -197,7 +201,7 @@
             justify-content: flex-start
             padding: 0 20px
             overflow-y: scroll
-            height: calc(100vh - 88px)
+            height: calc(100vh - 88px) //жестка я штука, помогает работать скролу у менюшки, на разных ширинах нужно регулировать, из-за разной высоты шапки
             padding-bottom: 20px
             background-color: #fff
         &__item
@@ -215,7 +219,7 @@
             padding: 20px
             &:active, &:focus
                 color: white
-                background-color: #0072bc
+                background-color: $decor-main
 
     .search-form
         flex-basis: auto
@@ -271,5 +275,5 @@
             flex-basis: 100%
             margin-top: 10px
             position: relative
-            z-index: 101
+            
         

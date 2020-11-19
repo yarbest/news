@@ -4,14 +4,104 @@
 
 @import _common.sass
 @import blocks/_header.sass
+@import blocks/_daily.sass
 
 
 .container
     max-width: 1000px
     margin: 0 auto
 
+.main-wrapper
+    background-color: #ebebeb5e
+    padding-top: 20px
+    &__inner // этот уже ограничен контейнером
+        display: flex
+
 .main
-    &__body
+    margin: 0 20px
+    max-width: 460px
+    display: flex
+    flex-wrap: wrap
+    align-content: flex-start
+    justify-content: space-between
+    &__large-news
+        max-height: 320px
+        margin-bottom: 15px
+        flex-basis: 100%
+        padding: 115px 20px 40px
+    &__small-news
+        flex-basis: 220px
+        margin-bottom: 20px
+
+
+.large-news
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    background-repeat: no-repeat
+    background-size: cover
+    color: #ffffff
+    
+    &__hashtag
+        margin-bottom: 15px
+        color: #ffffff
+    &__link
+        display: block
+    &__title
+        max-width: 370px
+        margin-bottom: 20px
+        font-size: 30px
+        font-weight: 700
+        line-height: 35px
+        border-bottom: 3px solid transparent
+    &__footer
+    &__date
+        margin-right: 17px
+    &__time-icon
+        fill: #ffffff
+
+.small-news
+    &__link
+    &__image
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 100%)
+        max-width: 100%
+        object-fit: cover
+        width: 100%
+        &-wrap
+            max-height: 142px
+            margin-bottom: 5px
+            overflow: hidden
+    &__title
+        margin-bottom: 12px
+        font-size: 1.4rem
+        font-weight: 700
+        line-height: 20px
+    
+    &__footer
+    &__hashtag
+        margin-right: 15px
+    &__time
+        margin-right: 15px
+    &__comments
+
+
+@media ( min-width: 1199px )
+    .large-news
+        &__title
+            transition: 0.3s
+            &:hover
+                border-color: white
+
+    .small-news
+        &__image
+            transition: 0.5s ease
+            &:hover
+                transform: scale(1.2)
+                
+        &__title
+            transition: 0.2s ease
+            &:hover
+                color: $decor-main
 
 
 @media ( max-width: 1199px )
@@ -19,12 +109,17 @@
         width: 100%
         padding: 0 20px
 
+    
+
 @media ( max-width: 767px )
-    .main
-        &__body
-            margin-top: 90px
+    .main-wrapper
+        margin-top: 88px
+        //так как шапка фиксирована, нужно предотвратить заезжание контента под нее
+
+@media ( max-width: 575px )
+    .main-wrapper
+        margin-top: 68px
 
 @media ( max-width: 480px )
-    .main
-        &__body
-            margin-top: 80px
+    .main-wrapper
+        margin-top: 60px

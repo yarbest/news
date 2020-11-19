@@ -1,0 +1,53 @@
+
+.daily
+    max-width: 250px
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05)
+
+    &__body
+        padding: 25px 0
+        // border: 1px solid #000
+    &__title
+        padding: 25px 20px
+        font-size: 2rem
+        font-weight: 700
+        border-bottom: 1px solid #00000036
+    &__list
+    &__item
+        &:not(:last-child)
+            margin-bottom: 20px
+        padding: 0 20px
+    &__allnews
+        display: block
+        max-width: 175px
+        margin: 0 auto
+        margin-top: 40px
+        padding: 15px 45px
+        font-size: 1.4rem
+        color: $decor-main 
+        border: 1px solid $decor-main
+        border-radius: 23px
+        text-align: center
+        transition: 0.3s ease
+        &:hover
+            color: white
+            background-color: $decor-main
+
+.daily-item
+    &__title
+        display: block //это ссылка
+        margin-bottom: 15px
+        font-size: 1.4rem
+        line-height: 20px
+        color: #000000
+    &__footer
+        justify-content: space-between
+        max-width: 200px
+    &__hashtag
+        margin-right: 10px        
+    &__time
+        margin-right: 10px
+    &__comments
+
+
+
+
