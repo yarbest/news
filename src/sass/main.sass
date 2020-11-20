@@ -16,10 +16,14 @@
     padding-top: 20px
     &__inner // этот уже ограничен контейнером
         display: flex
+        flex-wrap: wrap
+
 
 .main
+    flex-basis: 46%
+    // flex-grow: 1
+    // max-width: 460px
     margin: 0 20px
-    max-width: 460px
     display: flex
     flex-wrap: wrap
     align-content: flex-start
@@ -28,7 +32,8 @@
         max-height: 320px
         margin-bottom: 15px
         flex-basis: 100%
-        padding: 115px 20px 40px
+        padding: 0 20px 40px
+        min-height: 320px
     &__small-news
         flex-basis: 220px
         margin-bottom: 20px
@@ -63,6 +68,10 @@
         fill: #ffffff
 
 .small-news
+    flex-basis: 48%
+    display: flex
+    flex-direction: column
+
     &__link
     &__image
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 100%)
@@ -74,12 +83,15 @@
             margin-bottom: 5px
             overflow: hidden
     &__title
+        max-height: 60px
+        overflow: hidden
         margin-bottom: 12px
         font-size: 1.4rem
         font-weight: 700
         line-height: 20px
-    
     &__footer
+        margin-top: auto
+        align-items: flex-end
     &__hashtag
         margin-right: 15px
     &__time
@@ -87,13 +99,24 @@
     &__comments
 
 .adverts
-    max-width: 250px
+    // max-width: 250px
+    flex-basis: 25%
     &__item
         display: block
         &:not(:last-child)
             margin-bottom: 20px
     &__image
         max-width: 100%
+
+.enormous-news
+    flex-basis: 59%
+    background-repeat: no-repeat
+    background-size: cover
+    border: 1px solid #000
+
+.popular-news
+    flex-basis: 41%
+    border: 1px solid #000
 
 @media ( min-width: 1199px )
     .large-news
@@ -155,30 +178,78 @@
     .container
         width: 100%
         padding: 0 20px
+    .daily
+        flex-basis: 25%
+    .main
+        flex-basis: 45%
+        flex-grow: 1
+    .adverts
+        flex-basis: 20%
 
-
+@media ( max-width: 991px )
+    //из другого фала
+    .daily
+        flex-grow: 1
+    .main
+        flex-grow: 3
+    .adverts
+        // flex-basis: 20%
 
 @media ( max-width: 767px )
     .main-wrapper
         margin-top: 68px
         //так как шапка фиксирована, нужно предотвратить заезжание контента под нее
-    
+    //из другого фала
+
+    .large-news
+        &__title
+            font-size: 24px
+
     .adverts
         display: none
 
+
+@media ( max-width: 640px )
+
+    .daily
+        flex-basis: 100%
+    
+    .main
+        flex-basis: 100%
+        order: -1
+    .small-news
+
+        // display: flex
+        // flex-direction: column
+        &__title
+            // margin-bottom: auto
+        &__footer
+            // margin-top: auto
+    
 @media ( max-width: 575px )
     .main-wrapper
         margin-top: 68px
         &__inner
-            flex-wrap: wrap
+            // flex-wrap: wrap
             flex-direction: column
             align-items: center
 
     .main
         margin: 0
-        order: 1
-        justify-content: center
+        // justify-content: center
 
 @media ( max-width: 480px )
     .main-wrapper
         margin-top: 60px
+
+
+@media ( max-width: 380px )
+    .main
+        justify-content: center
+    .small-news
+        flex-basis: 100%
+        width: auto
+        max-width: none
+        &__image
+            &-wrap
+                max-height: none

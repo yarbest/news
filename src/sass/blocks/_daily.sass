@@ -1,6 +1,7 @@
 
 .daily
-    max-width: 250px
+    // max-width: 250px
+    flex-basis: 25%
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05)
 
     &__body
@@ -13,8 +14,8 @@
         border-bottom: 1px solid #00000036
     &__list
     &__item
-        &:not(:last-child)
-            margin-bottom: 20px
+        // &:not(:last-child)
+        margin-bottom: 20px
         padding: 0 20px
     &__allnews
         display: block
@@ -33,14 +34,20 @@
             background-color: $decor-main
 
 .daily-item
+    display: flex
+    flex-direction: column
     &__title
         display: block //это ссылка
         margin-bottom: 15px
+        max-height: 100px
+        overflow: hidden
         font-size: 1.4rem
         line-height: 20px
         color: #000000
     &__footer
         justify-content: space-between
+        align-items: flex-end
+        margin-top: auto
         max-width: 200px
     &__hashtag
         margin-right: 10px        
@@ -49,10 +56,48 @@
     &__comments
 
 
+@media (max-width: 991px)
+    .daily-item
+        &__footer
+            flex-wrap: wrap
+            justify-content: flex-start
+        &__hashtag
+            flex-basis: 100%
+            margin-bottom: 10px
+
+@media (max-width: 767px)
+    .daily
+        &__allnews
+            margin-top: 20px
+
+@media (max-width: 640px)
+    .daily
+        &__list
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+        &__item
+            flex-basis: 48%
+            // margin-bottom: 20px
+  
+
 @media (max-width: 575px)
     .daily
-        order: 2
-        // display: flex
-        // flex-direction: column
-        // align-items: center
+        &__item
+            padding: 0 10px
 
+
+@media (max-width: 380px)
+    .daily
+        &__item
+            flex-basis: 100%            
+            margin-bottom: 30px
+    .daily-item
+        &__footer
+            flex-wrap: nowrap
+            justify-content: space-between
+            // align-items: center
+            max-width: none
+        &__hashtag
+            margin: 0
+            margin-right: 10px
