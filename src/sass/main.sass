@@ -45,6 +45,8 @@
     justify-content: flex-end
     background-repeat: no-repeat
     background-size: cover
+    background-position: center center
+
     overflow: hidden
     color: #ffffff
     &__hashtag
@@ -199,8 +201,9 @@
     .main-wrapper
         margin-top: 68px
         //так как шапка фиксирована, нужно предотвратить заезжание контента под нее
-    //из другого фала
-
+    
+    .main
+        margin-right: 0
     .large-news
         &__title
             font-size: 24px
@@ -217,6 +220,7 @@
     .main
         flex-basis: 100%
         order: -1
+        margin: 0
     .small-news
 
         // display: flex
@@ -234,15 +238,15 @@
             flex-direction: column
             align-items: center
 
-    .main
-        margin: 0
+    // .main
+    //     margin: 0
         // justify-content: center
 
 @media ( max-width: 480px )
     .main-wrapper
         margin-top: 60px
-
-
+    .large-news
+        // background-position: center center
 @media ( max-width: 380px )
     .main
         justify-content: center
