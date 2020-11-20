@@ -643,7 +643,7 @@ body {
     background-color: #fff;
   }
   .header__body {
-    padding: 20px 0;
+    padding: 10px 0;
   }
   .header__logo {
     margin-right: auto;
@@ -667,7 +667,7 @@ body {
     position: fixed;
     z-index: 100;
     background-color: #fff;
-    top: 88px;
+    top: 68px;
     left: 0;
     margin-top: 0;
     width: 100%;
@@ -694,7 +694,7 @@ body {
             justify-content: flex-start;
     padding: 0 20px;
     overflow-y: scroll;
-    height: calc(100vh - 88px);
+    height: calc(100vh - 68px);
     padding-bottom: 20px;
     background-color: #fff;
   }
@@ -736,10 +736,10 @@ body {
     padding: 10px 0;
   }
   .header-navigation {
-    top: 68px;
+    top: 67px;
   }
   .header-navigation__list {
-    height: calc(100vh - 68px);
+    height: calc(100vh - 67px);
   }
 }
 
