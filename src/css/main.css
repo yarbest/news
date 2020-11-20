@@ -102,24 +102,25 @@ h6 {
 }
 
 .submenuItems {
-  width: 140%;
+  width: 100%;
   position: absolute;
   z-index: 100;
   top: 25px;
-  left: -20px;
+  left: 0;
   display: none;
   background: #ffffff;
-  border-radius: 20px;
 }
 
 .submenuItems li {
-  border-radius: 20px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   border: 1px solid #0072bc;
-  -webkit-box-shadow: 0 0 2px 2px #0071bc4b;
-          box-shadow: 0 0 2px 2px #0071bc4b;
+  -webkit-box-shadow: 0 0 2px 2px #0071bc0e;
+          box-shadow: 0 0 2px 2px #0071bc0e;
+}
+
+.submenuItems li:not(:last-child) {
   margin-bottom: 2px;
 }
 
