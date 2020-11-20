@@ -839,6 +839,14 @@ body {
   margin-right: 10px;
 }
 
+@media (max-width: 575px) {
+  .daily {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -1076,11 +1084,34 @@ body {
   .main-wrapper {
     margin-top: 88px;
   }
+  .adverts {
+    display: none;
+  }
 }
 
 @media (max-width: 575px) {
   .main-wrapper {
     margin-top: 68px;
+  }
+  .main-wrapper__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main {
+    margin: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

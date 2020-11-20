@@ -42,7 +42,6 @@
     background-size: cover
     overflow: hidden
     color: #ffffff
-
     &__hashtag
         align-self: flex-start
         margin-bottom: 15px
@@ -163,10 +162,22 @@
     .main-wrapper
         margin-top: 88px
         //так как шапка фиксирована, нужно предотвратить заезжание контента под нее
+    
+    .adverts
+        display: none
 
 @media ( max-width: 575px )
     .main-wrapper
         margin-top: 68px
+        &__inner
+            flex-wrap: wrap
+            flex-direction: column
+            align-items: center
+
+    .main
+        margin: 0
+        order: 1
+        justify-content: center
 
 @media ( max-width: 480px )
     .main-wrapper
