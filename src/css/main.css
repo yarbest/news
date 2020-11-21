@@ -792,10 +792,10 @@ body {
 .daily__list {
   max-height: 620px;
   overflow: auto;
-  background: -webkit-gradient(linear, left bottom, left top, from(#8a8a8ab9), color-stop(5%, rgba(255, 255, 255, 0)));
-  background: -webkit-linear-gradient(bottom, #8a8a8ab9 0%, rgba(255, 255, 255, 0) 5%);
-  background: -o-linear-gradient(bottom, #8a8a8ab9 0%, rgba(255, 255, 255, 0) 5%);
-  background: linear-gradient(360deg, #8a8a8ab9 0%, rgba(255, 255, 255, 0) 5%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#94bde1), color-stop(5%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(bottom, #94bde1 0%, rgba(255, 255, 255, 0) 5%);
+  background: -o-linear-gradient(bottom, #94bde1 0%, rgba(255, 255, 255, 0) 5%);
+  background: linear-gradient(360deg, #94bde1 0%, rgba(255, 255, 255, 0) 5%);
 }
 
 .daily__item {
@@ -900,10 +900,10 @@ body {
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    background: -webkit-gradient(linear, left bottom, left top, from(#8a8a8ab9), color-stop(3%, rgba(255, 255, 255, 0)));
-    background: -webkit-linear-gradient(bottom, #8a8a8ab9 0%, rgba(255, 255, 255, 0) 3%);
-    background: -o-linear-gradient(bottom, #8a8a8ab9 0%, rgba(255, 255, 255, 0) 3%);
-    background: linear-gradient(360deg, #8a8a8ab9 0%, rgba(255, 255, 255, 0) 3%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#94bde1), color-stop(5%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(bottom, #94bde1 0%, rgba(255, 255, 255, 0) 5%);
+    background: -o-linear-gradient(bottom, #94bde1 0%, rgba(255, 255, 255, 0) 5%);
+    background: linear-gradient(360deg, #94bde1 0%, rgba(255, 255, 255, 0) 5%);
   }
   .daily__item {
     -ms-flex-preferred-size: 48%;

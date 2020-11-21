@@ -17,7 +17,9 @@
     &__list
         max-height: 620px
         overflow: auto
-        background: linear-gradient(360deg, #8a8a8ab9 0%, rgba(255,255,255,0) 5%)
+        // background: linear-gradient(360deg, #8a8a8ab9 0%, rgba(255,255,255,0) 5%)
+        background: linear-gradient(360deg, lighten($decor-main,20%) 0%, rgba(255,255,255,0) 5%)
+
     &__item
         // &:not(:last-child)
         margin-bottom: 20px
@@ -86,7 +88,7 @@
             display: flex
             justify-content: space-between
             flex-wrap: wrap
-            background: linear-gradient(360deg, #8a8a8ab9 0%, rgba(255,255,255,0) 3%)
+            background: linear-gradient(360deg, lighten($decor-main,20%) 0%, rgba(255,255,255,0) 5%)
         &__item
             flex-basis: 48%
             // margin-bottom: 20px
