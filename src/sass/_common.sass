@@ -26,6 +26,12 @@ $maxWidth: 1366 //все полотно, а не только контейнер
     $maxWidth: $maxWidth - 320
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
+=cut-text ($number-of-rows)
+    display: -webkit-box 
+    -webkit-line-clamp: $number-of-rows
+    -webkit-box-orient: vertical
+    text-overflow: ellipsis
+    overflow: hidden
 
 
 

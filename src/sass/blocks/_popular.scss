@@ -25,6 +25,7 @@
         margin-bottom: 10px;
         line-height: 22px;
         font-weight: 700;
+        @include cut-text(2);
     }
     &__footer {
         // justify-content: space-between;
