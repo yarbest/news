@@ -27,6 +27,8 @@ $maxWidth: 1366 //все полотно, а не только контейнер
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
 
+
+
 html
     font-size: 62.5%
 
@@ -82,12 +84,7 @@ body
         width: 50px
         height: 50px
 
-@media (min-width: 1200px)
-    .daily-item
-        &__title
-            transition: 0.2s ease
-            &:hover
-                color: $decor-main          
+@media (min-width: 1200px)  
     .news-hashtag
         transition: 0.2s ease
         &:hover
