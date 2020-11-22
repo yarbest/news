@@ -73,6 +73,22 @@ body
         height: 11px
         fill: $decor-main
 
+.footer-link
+    position: relative
+    &::after
+        position: absolute
+        left: 0
+        bottom: -5px
+        content: ''
+        width: 0
+        height: 2px
+        transition: 0.2s ease
+        background-color: #fff
+    &:hover
+        &::after
+            width: 100%
+
+
 // button to top
 .btn-scroll
     display: none
