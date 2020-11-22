@@ -124,17 +124,14 @@
     background-size: cover
     background-position: center center
     overflow: hidden
-    border: 1px solid #000
     color: #fff
     &__body
-        border: 1px solid red
         min-height: 395px
         display: flex
         flex-direction: column
         justify-content: flex-end
         align-items: flex-start
-
-        padding: 0 0 45px 20px
+        padding: 0 20px 45px
     &__hashtag
         margin-bottom: 20px
         border-bottom: 1px solid transparent
@@ -281,12 +278,15 @@
     .main
         margin-right: 0
     .large-news
-        &__title
-            font-size: 24px
+        
 
     .adverts
         display: none
 
+    .enormous-news
+        flex-basis: 100%
+        &__title
+            font-size: 24px
 
 @media ( max-width: 640px )
 
@@ -317,25 +317,41 @@
 @media ( max-width: 480px )
     .main-wrapper
         margin-top: 60px
+    .main
+        &__large-news
+            padding: 0 10px 30px
     .large-news
         background-position: right center
         &__title
             font-size: 20px
             line-height: 1.3em
-        // background-position: center center
+    .enormous-news
+        &__body
+            min-height: 320px
+            padding: 0 10px 30px
+        &__title
+            font-size: 20px
+            line-height: 1.3em
+        &__details
+            display: none
+
 @media ( max-width: 380px )
     .main
-        justify-content: center
-        &__large-news
-            padding-bottom: 30px
+        justify-content: center            
         &__small-news
             flex-basis: 100%
             width: auto
             max-width: none
-    
+
+    .large-news
+
 
     .small-news
         
         &__image
             &-wrap
                 max-height: none
+    
+    .enormous-news
+        &__footer
+            margin-bottom: 0

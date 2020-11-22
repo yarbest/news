@@ -22,9 +22,9 @@
 
 @media (min-width: 1200px) {
     body {
-        @include scrollbars(10px, rgb(180, 180, 180), lightgray);
+        @include scrollbars(10px, rgb(131, 131, 131), lightgray);
     }
     .daily__list {
-        @include scrollbars(5px, rgb(180, 180, 180), lightgray);
+        @include scrollbars(5px, rgb(143, 142, 142), lightgray);
     }
 }

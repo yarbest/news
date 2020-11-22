@@ -1,10 +1,9 @@
 .popular-news {
     flex-basis: 41%;
     margin-top: 20px;
-    border: 1px solid #000;
     background-color: #fff;
     &__title {
-        padding: 25px 0 25px 17px;
+        padding: 25px 17px;
         font-size: 20px;
         font-weight: 700;
         border-bottom: 1px solid #00000036;
@@ -48,6 +47,37 @@
             &:hover {
                 color: $decor-main;
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .popular-news {
+        flex-basis: 100%;
+    }
+    .popular-item {
+        &__title {
+            @include cut-text(3);
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .popular-news {
+        &__body {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .popular-news {
+        flex-basis: 41%;
+        margin-top: 20px;
+        background-color: #fff;
+        &__title {
+            font-size: 18px;
         }
     }
 }
