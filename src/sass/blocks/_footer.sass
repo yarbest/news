@@ -3,6 +3,7 @@
     color: #ffffff
     &__body
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
         padding: 55px 0 40px
     &__navigation
@@ -44,8 +45,12 @@
     &__item
         margin-bottom: 15px
 
-
-
+.footer-logo
+    &__image
+        transition: 0.3s ease
+    &:hover
+        .footer-logo__image
+            fill: #fff
 
 
 .footer-contacts
@@ -130,6 +135,7 @@
         fill: #ffffff
     &__number
         font-size: 18px
+
 .mail
     display: flex
     align-items: center
@@ -141,3 +147,47 @@
         fill: #ffffff
     &__address
         font-size: 18px
+
+
+
+@media (max-width: 767px)
+    .footer
+        &__contacts
+            flex-basis: 100%
+    
+    .footer-contacts
+        align-items: center
+
+@media (max-width: 480px)
+    .footer
+        &__body
+            padding: 40px 0
+        &__navigation
+            flex-basis: 100%
+            margin-bottom: 20px
+        &__about
+            flex-basis: 100%
+            margin-bottom: 20px
+        &__socials
+            margin-bottom: 20px
+        &__copyright
+            padding: 10px
+    
+    .footer-navigation
+        &__list
+            max-height: 130px
+            align-content: space-between
+        &__item 
+            text-align: center
+            width: auto
+    
+    .footer-about
+        align-items: center
+        &__list
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            width: 100%
+        &__item
+            // border: 1px solid red
+            padding: 0 10px
